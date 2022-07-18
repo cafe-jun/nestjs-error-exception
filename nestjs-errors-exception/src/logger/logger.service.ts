@@ -5,9 +5,19 @@ export class LoggerService implements LS {
   private logger: winston.Logger;
 
   constructor() {}
-  warn(message: any, ...optionalParams: any[]) {}
-  debug(message: any, ...optionalParams: any[]) {}
-  log(message: any, ...optionalParams: any[]) {}
-  error(message: any, ...optionalParams: any[]) {}
-  verbose(message: any, ...optionalParams: any[]) {}
+  warn(message: any, ...optionalParams: any[]) {
+    this.logger.warn(message);
+  }
+  debug(message: any, ...optionalParams: any[]) {
+    this.logger.debug(message);
+  }
+  log(message: any, ...optionalParams: any[]) {
+    this.logger.log(message);
+  }
+  error(message: any, ...optionalParams: any[]) {
+    this.logger.error(message);
+  }
+  verbose(message: any, ...optionalParams: any[]) {
+    this.logger.verbose(message);
+  }
 }
