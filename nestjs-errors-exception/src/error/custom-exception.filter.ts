@@ -63,12 +63,11 @@ export class CustomExceptionFilter implements ExceptionFilter {
     // Logs will contain an error identifier as well as
     // request path where it has occurred
     this.logger.error(
-      `Got an exception: ${JSON.stringify({
+      `exception: ${JSON.stringify({
         path: request.url,
         ...body,
       })}`,
     );
-
     response.status(status).json(body);
   }
 }

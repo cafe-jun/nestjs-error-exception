@@ -9,6 +9,6 @@ export const dataSource: MysqlConnectionOptions = {
   password: 'Jsshin2440!@',
   database: 'study_db',
   entities: [User],
-  logging: 'all',
-  synchronize: true,
+  logging: true,
+  synchronize: false,
 };
